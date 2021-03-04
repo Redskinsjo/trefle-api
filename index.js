@@ -31,10 +31,14 @@ class MessageService {
 
   async create(data) {
     const time = Date.now().toString();
+    const colors = ["blue", "red", "pink", "green", "black", "orange"];
+    const rand = Math.floor(Math.random() * (colors.length - 1 - 0) + 0);
+    const color = colors[rand];
     const message = {
       id: this.messages.length,
       text: data.text,
       datetime: time,
+      color,
     };
 
     this.messages.push(message);
@@ -80,4 +84,7 @@ app
 
 app.service("/messages").create({
   text: "Hello real-time world",
+});
+app.service("/messages").create({
+  text: "Voici un chat pour tous, écrivez ce qu'il vous passe par la tête !",
 });
