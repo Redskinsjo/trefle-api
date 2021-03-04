@@ -8,9 +8,12 @@ It permits:
 
 Monitoring trefle Gatsby app (within the list on my repositories)
 
-### Instructions
+### Guidelines
+
 
 Run to open project: 
+
+( if you don't have node installed, click [here](https://nodejs.org/en/download/) and follow instructions, then type in command ```npm install --global yarn``` )
 
 in your directory ```git clone https://github.com/Redskinsjo/trefle-api```
 
