@@ -19,6 +19,8 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // init the server
 const app = express(feathers());
+app.use(cors());
+app.use(formidable());
 
 class MessageService {
   constructor() {
@@ -48,8 +50,6 @@ class MessageService {
 }
 
 // use of middlewares
-app.use(cors());
-app.use(formidable());
 const loginRoute = require("./routes/user/login");
 app.use(loginRoute);
 const signupRoute = require("./routes/user/signup");
